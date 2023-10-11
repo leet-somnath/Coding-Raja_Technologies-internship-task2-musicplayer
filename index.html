@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<nav style="margin: 20px;background-color: azure; padding: 20px; border-radius:20px;">
+  <U><H1> <span>CODING RAJA TECHNOLOGIES INTERNSHIP-TASK2</span></H1> </U> 
+</nav>
+  <div class="main">
+  	<p id="logo"><i class="fa fa-music"></i>Music Player</p>
+ <u>  <H2> <p id="logo" style="margin-left: 500px; margin-top: 30PX; color: darkblue;"> Listen Your Favoruite songs....</p></H2></u>
+        
+        <div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">5</p>
+        </div>
+
+
+     <div class="left">
+
+   
+      <img id="track_image">
+         <div class="volume">
+            <p id="volume_show">90</p>
+            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+
+     </div>
+ 
+     
+  	 <div class="right">
+       
+       <div class="song_detail">
+           <p id="title" style="margin-left: 150PX;background-color: rgb(204, 148, 231);padding: 10px; border-radius: 20px;margin-right: 150px; color: black;">title.mp3</p>
+           <p id="artist" style="margin-left: 300PX;">Artist name</p>
+       </div>
+
+
+  	 	<div class="middle">
+  	       <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+      	   <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+  	       <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+  	   </div>
+
+       
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+           <button id="auto" onclick="autoplay_switch()">Auto &nbsp;<i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+        </div>
+           
+  	</div>
+
+
+  </div>
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content text-center">
+            <p class="fs-15">&copy;Copyright 2022. All Rights Reserved </p>
+        </div>
+    </div>
+</footer>
+  
+  <script src="main.js"></script>
+
+</body>
+</html>
